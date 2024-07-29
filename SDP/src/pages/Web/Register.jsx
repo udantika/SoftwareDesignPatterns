@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label"
  
 const Register = () => {
   return (
-    <div className="h-full w-full flex justify-center items-center">
+    <div className="h-full w-full flex justify-center items-center bg-green-100 ">
 
     <Card className="w-[350px]">
    <CardHeader>
@@ -43,7 +43,10 @@ const Register = () => {
    </CardContent>
    <CardFooter className="flex justify-between">
      {/* <Button variant="outline">Cancel</Button> */}
+     <div className="flex justify-center items-center">
+      
      <Button>Register</Button>
+     </div>
    </CardFooter>
  </Card>
  </div>

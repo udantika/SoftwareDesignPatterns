@@ -1,8 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 
 
-
-const initialState = {
+const initialState= {
   theme: "system",
   setTheme: () => null,
 }
