@@ -1,100 +1,496 @@
-
-.slideshow {
-  list-style-type: none;
-  height: 50px;
-  width: 70px;
-  overflow-y: auto;
-  overflow: auto;
-  
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
 }
-
-/** SLIDESHOW **/
-.slideshow,
-.slideshow:after {
-  top: -16px; /*Not sure why I needed this fix*/
-  position: fixed;
-  overflow-y: auto;
-  width: 100%;
-  margin-top: 140px;
-  height: 85%;
-  left: 0px;
-  z-index: 0;
-}
-
-.slideshow li span {
- 
-  position: absolute;
-  width: 100%;
+html {
   height: 100%;
-  top: 0px;
-  left: 0px;
-  color: transparent;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  background: #efefef;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+a {
+  font-weight: bold;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+.cta {
+  padding: 14px;
+  border-radius: 4px;
+  background: #ff9900;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px #e08428;
+  text-transform: uppercase;
+}
+.cta:hover {
+  background: #f19710;
+}
+.box {
+  padding: 80px 0;
+}
+h2.title {
+  font: bold 30px/30px Arial, sans-serif;
+  color: #333;
+  padding-bottom: 20px;
+}
+p.descr {
+  font: normal 18px/36px Arial, sans-serif;
+  color: #666;
+  margin: 0 auto;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*header*/
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  box-shadow: 0 1px 1px #ddd;
+  z-index: 999;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  width: 200px;
+  padding-top: 30px;
+}
+.menu {
+  float: right;
+}
+.menu li {
+  display: inline-block;
+  margin-right: 60px;
+  padding: 40px 0 0;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
+.menu li a {
+  color: #777;
+  text-transform: uppercase;
+}
+.menu li a:hover {
+  color: #555;
+}
+.menu li a.cta {
+  color: #fff;
+}
+/*home*/
+.home {
+  position: relative;
+  top: 100px;
+  height: 500px;
+  background: #aad0df;
+  margin-bottom: 100px; /*?*/
+}
+.founder {
+  height: 500px;
+  background: #aad0df
+    url("http://conversionlab.no/wp-content/uploads/2013/09/finge-600-21.png")
+    no-repeat left bottom;
+  background-size: 400px;
+}
+.founder-text {
+  float: right;
+  position: relative;
+  top: 130px;
+  width: 460px;
+}
+h1.f-title {
+  font: bold 42px/52px Arial, sans-serif;
+  color: #fff;
+}
+p.f-descr {
+  font: bold 18px/32px Arial, sans-serif;
+  color: #555;
+  padding: 15px 0 40px 0;
+}
+/*results*/
+.results {
+  text-align: center;
+  background: #fff;
+}
+.results p.descr {
+  width: 700px;
+}
+.results-item {
+  padding-top: 60px;
+}
+.column {
+  float: left;
+  width: 33%;
+  padding-right: 0.5%;
+  padding-top: 180px;
+}
+.column:last-child {
+  padding-right: 0;
+}
+.item-1-icon {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/rocket2.png")
+    no-repeat center top;
+}
+.item-2-icon {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/money3.png")
+    no-repeat center top;
+}
+.item-3-icon {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/speed1.png")
+    no-repeat center top;
+}
+.item-title {
+  font: bold 24px/24px Arial, sans-serif;
+  color: #333;
+  padding-bottom: 20px;
+}
+.item-descr {
+  font: normal 18px/30px Arial, sans-serif;
+  color: #555;
+}
+/*external block*/
+.external {
+  height: 220px; /* ? */
+}
+.external-text {
+  float: right;
+  width: 620px;
+}
+.external-img {
+  float: left;
+  width: 280px;
+  height: 160px;
+  background: url("http://conversionlab.no/wp-content/uploads/2016/11/campaign-monitor-mbp.png")
+    no-repeat left bottom;
+  background-size: 280px;
+  padding-top: 60px;
+}
+/*process*/
+.process {
+  background: #fff;
+  text-align: center;
+}
+.process h2.title {
+  padding-bottom: 80px;
+}
+.process-icon-1 {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/target-red.png")
+    no-repeat center top;
+}
+.process-icon-2 {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/blueprints-green.png")
+    no-repeat center top;
+}
+.process-icon-3 {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/chemistry1.png")
+    no-repeat center top;
+}
+/*help & help-2*/
+.help {
+  text-align: center;
+  background: #525e6c;
+}
+.help h2.item-title {
+  color: #fff;
+}
+.help p.item-descr {
+  color: #fff;
+  padding-bottom: 60px;
+}
+/*screen-size*/
+.screen {
+  background: #fff;
+  height: 260px; /* ? */
+}
+.screen-text {
+  float: left;
+  width: 650px;
+}
+.screen-img {
+  float: right;
+  width: 240px;
+  height: 340px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/iPadmini-iPhone5s_510px1.png")
+    no-repeat;
+  background-size: 240px;
+}
+/*testing*/
+.testing {
+  text-align: center;
+}
+.testing p.descr {
+  width: 740px;
+  padding-bottom: 60px;
+}
+.testing-img-1 {
+  float: left;
+  width: 400px;
+  height: 230px;
+  background: url("http://conversionlab.no/wp-content/uploads/2015/02/campaignmonitor-a.png")
+    no-repeat;
+  background-size: 400px;
+}
+.testing-img-2 {
+  float: right;
+  width: 400px;
+  height: 230px;
+  background: url("http://conversionlab.no/wp-content/uploads/2015/02/campaignmonitor-b.png")
+    no-repeat;
+  background-size: 400px;
+}
+.testing-img-arrow {
+  float: right;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  top: 300px;
+  left: 200px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/right-arrow.png")
+    no-repeat;
+  background-size: 100px;
+}
+.testing p.rate {
+  padding-top: 260px;
+  font: bold 24px/24px Arial, sans-serif;
+  color: #222;
+}
+.testing p span {
+  font-size: 62px;
+  line-height: 2;
+  color: #525e6c;
+}
+/*review*/
+.review {
+  background: #fff
+    url("http://conversionlab.no/wp-content/uploads/2015/02/shamita-ongrey-large.jpg")
+    no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  opacity: 0;
-  z-index: 0;
-  animation: imageAnimation 30s linear infinite 0s;
 }
-
-.slideshow li:nth-child(1) span {
-  background-image: url("https://tse3.mm.bing.net/th?id=OIP.jrfRfV4aKPgWHTEAuhSw7wHaEK&pid=Api&P=0&h=220");
+.review-text {
+  width: 600px;
 }
-.slideshow li:nth-child(2) span {
-  background-image: url("https://fashion-era.com/wp-content/uploads/2021/05/The-Costume-Institute-to-Versailles-Installation.jpg");
-  animation-delay: 6s;
+.review h4 {
+  padding: 40px 0;
+  color: #222;
 }
-.slideshow li:nth-child(3) span {
-  background-image: url("https://tse3.mm.bing.net/th?id=OIP.jrfRfV4aKPgWHTEAuhSw7wHaEK&pid=Api&P=0&h=220");
-  animation-delay: 12s;
+.review-img {
+  width: 200px;
+  height: 30px;
+  background: url("http://conversionlab.no/wp-content/uploads/2015/02/campaignmonitor-logo-dark.png")
+    no-repeat;
+  background-size: 200px;
 }
-.slideshow li:nth-child(4) span {
-  background-image: url("https://fashion-era.com/wp-content/uploads/2021/05/The-Costume-Institute-to-Versailles-Installation.jpg");
-  animation-delay: 18s;
+/*effect*/
+.effect {
+  text-align: center;
 }
-.slideshow li:nth-child(5) span {
-  background-image: url("https://tse3.mm.bing.net/th?id=OIP.jrfRfV4aKPgWHTEAuhSw7wHaEK&pid=Api&P=0&h=220");
-  animation-delay: 24s;
+.effect p.descr {
+  width: 700px;
+  padding-bottom: 60px;
 }
-
-@keyframes imageAnimation {
-  0% {
-    opacity: 0;
-    animation-timing-function: ease-in;
-  }
-  8% {
-    opacity: 1;
-    animation-timing-function: ease-out;
-  }
-  17% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+.effect-img {
+  width: 800px;
+  height: 240px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/danske-bank-bsu-2.png")
+    no-repeat;
+  background-size: 800px;
+  margin: 0 auto;
+  padding-bottom: 0px;
 }
-
-@keyframes titleAnimation {
-  0% {
-    opacity: 0;
-  }
-  8% {
-    opacity: 1;
-  }
-  17% {
-    opacity: 1;
-  }
-  19% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+.effect p.rate {
+  font: bold 18px/18px Arial, sans-serif;
+  text-transform: uppercase;
+  color: #222;
 }
-
-.no-cssanimations .cb-slideshow li span {
-  opacity: 1;
+.effect .rate span {
+  font-size: 62px;
+  color: #525e6c;
+  line-height: 2;
+}
+.effect-img-arrow {
+  width: 100px;
+  height: 40px;
+  position: relative;
+  left: 580px;
+  top: 70px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/right-arrow.png")
+    no-repeat;
+  background-size: 100px;
+}
+/*customers*/
+.customers {
+  text-align: center;
+  background: #fff;
+}
+.customers p.descr {
+  width: 700px;
+  padding-bottom: 60px;
+}
+.customer-wall-1 {
+  padding-bottom: 60px;
+}
+.customer-img-1 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/danske-bank.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 46px;
+}
+.customer-img-2 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/signicat.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 46px;
+}
+.customer-img-3 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/campaign-monitor-logo.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 46px;
+}
+.customer-img-4 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/storebrand.png")
+    no-repeat;
+  background-size: 200px;
+}
+.customer-wall-2 {
+  padding: 0 60px;
+}
+.customer-img-5 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/questback-logo.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 90px;
+}
+.customer-img-6 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/logo-em1.png")
+    no-repeat;
+  background-size: 200px;
+}
+.customer-img-7 {
+  float: right;
+  width: 160px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/adresseavisen-logo.png")
+    no-repeat;
+  background-size: 160px;
+}
+/*partner*/
+.partner {
+  text-align: center;
+}
+.partner-img {
+  width: 300px;
+  height: 100px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/unbounce-logo.png")
+    no-repeat;
+  background-size: 300px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*footer*/
+.footer {
+  background: #1a232b;
+}
+.footer h5.title {
+  text-transform: uppercase;
+  color: #ff9900;
+  padding-bottom: 10px;
+}
+.footer p.descr {
+  color: #fff;
+  font: bold 14px/20px Arial, sans-serif;
+  padding-bottom: 40px;
+}
+.footer .cta {
+  font-size: 12px;
+  background: #86ccc9;
+  box-shadow: 0 4px #6da3a1;
+}
+.footer .cta:hover {
+  background: #76b4b2;
+}
+.footer .column-1 {
+  float: left;
+  width: 200px;
+  margin-right: 80px;
+}
+.social a {
+  display: inline-block;
+}
+.fb-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3a579a;
+  margin-right: 3px;
+}
+.tw-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00abf0;
+  margin-right: 3px;
+}
+.g-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #df4a32;
+}
+/*copyright*/
+.copyright {
+  padding: 30px 0;
+  background: #222;
+  color: #525e6c;
+  font-size: 14px;
+}
+.copyright span {
+  float: left;
+}
+.copyright p {
+  float: right;
+}
+.copyright p a {
+  color: #525e6c;
 }

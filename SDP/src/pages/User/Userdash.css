@@ -21,7 +21,7 @@
 	--c-text-tertiary: var(--c-gray-500);
 }
 
-body {
+.abc {
 	
 	font-family: "Be Vietnam Pro", sans-serif;
 	background-color: var(--c-gray-900);

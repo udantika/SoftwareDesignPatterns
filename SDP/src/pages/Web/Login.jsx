@@ -1,13 +1,15 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import { Link } from 'react-router-dom'
 import { Label } from '@/components/ui/label'
 import Middle from '@/components/Web/Middle'
 
 const Login = () => {
+    
     return (
-        
-         
+       
+       
         <div className='h-full w-full flex justify-center items-center bg-green-100'>
             <Card className="w-1/4">
                 <CardHeader className="space-y-1">
@@ -32,10 +34,15 @@ const Login = () => {
                     </div>
                 </CardContent>
                 <CardFooter>
-                    <Button className="w-full">Login</Button>
+                    <Button className="w-full">
+                        <Link to='/user/dashboard'>
+                        Login
+                        </Link>
+                        </Button>
                 </CardFooter>
             </Card>
         </div>
+     
      
        
     )

@@ -121,7 +121,7 @@ const AdminUsers = () => {
           <SheetHeader>
             <SheetTitle>Edit profile</SheetTitle>
             <SheetDescription>
-              Make changes to your profile here. Click save when you're done.
+              Make changes to your profile here.
             </SheetDescription>
           </SheetHeader>
           <div className="grid gap-4 py-4">
@@ -133,13 +133,19 @@ const AdminUsers = () => {
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="username" className="text-right">
-                Username
+                Orderid
               </Label>
-              <Input id="username" value="@peduarte" className="col-span-3" />
+              <Input id="username" value="xxx" className="col-span-3" />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="username" className="text-right">
+                Email
+              </Label>
+              <Input id="username" value="user@flyrobe" className="col-span-3" />
             </div>
           </div>
           <SheetFooter className='flex flex-col flex-1'>
-              <Button className='w-1/2 bg-destructive hover:bg-destructive/80' onClick={()=>setOpen(!open)}>Cancle</Button>
+              <Button className='w-1/2 bg-destructive hover:bg-destructive/80' onClick={()=>setOpen(!open)}>Cancel</Button>
               <Button type="submit" className='w-1/2'>Save changes</Button>
           </SheetFooter>
         </SheetContent>

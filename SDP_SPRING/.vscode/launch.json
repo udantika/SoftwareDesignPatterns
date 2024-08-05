@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SdpApplication<sdp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.rollnumber.sdp.SdpApplication",
+            "projectName": "sdp",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
