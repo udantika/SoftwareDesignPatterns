@@ -45,12 +45,12 @@ public class UserController {
         return uservice.deleteUser(uid);
     }
     
-    // <--------------------------------->
     
     @PostMapping("/addproducts")
     public Product AddUsers(@RequestBody Product product) {
         return uservice.addproducts(product);
     }
+   
     @GetMapping("/getproduct")
     public List<Product> GetProduct() {
         return uservice.getproduct();

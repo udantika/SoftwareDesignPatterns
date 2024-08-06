@@ -34,7 +34,5 @@ public class Orders {
     private String payMethod;
     private Boolean orderConfirmed;
    
-
-   
 }
 

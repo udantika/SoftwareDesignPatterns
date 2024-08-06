@@ -8,6 +8,5 @@ import com.fashion.rent.model.Product;
 
 
 public interface ProductRepo extends JpaRepository<Product,Long>{
-
-    
+  
 } 

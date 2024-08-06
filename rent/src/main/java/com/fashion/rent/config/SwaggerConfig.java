@@ -23,7 +23,7 @@ public class SwaggerConfig {
     public OpenAPI openAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("KOSHKI")
+                        .title("KOSHKI FASHION RENTAL")
                         .description("This is a sample API documentation")
                         .version("1.0.0")
                         .contact(new Contact()
@@ -33,7 +33,7 @@ public class SwaggerConfig {
                         .license(new License()
                                 .name("Apache 2.0")
                                 .url("https://www.apache.org/licenses/LICENSE-2.0.html")))
-                .servers(List.of(new Server().url("http://localhost:7777")))
+                .servers(List.of(new Server().url("http://localhost:8080")))
                 .addSecurityItem(new SecurityRequirement()
                         .addList("bearerAuth"))
                 .components(new Components()
