@@ -15,7 +15,8 @@ const Navbar = () => {
     {
       title: "Register",
       path: "/register"
-    }
+    },
+
   ]
   
   return (

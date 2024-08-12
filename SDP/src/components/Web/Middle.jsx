@@ -1,20 +1,24 @@
 import React from 'react'
-
-
-import { Button } from "@/components/ui/button";
-import BoxReveal from "@/components/magicui/box-reveal";
 import './Midd.css'
 
 const Middle = () => {
+  const cardsData = [
+    { title: 'Diligord', image: 'https://unsplash.it/500/500/', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.' },
+    { title: 'Rocogged', image: 'https://unsplash.it/511/511/', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.' },
+    { title: 'Strizzes', image: 'https://unsplash.it/502/502/', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.' },
+    { title: 'Clossyo', image: 'https://unsplash.it/503/503/', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.' },
+    { title: 'Rendann', image: 'https://unsplash.it/504/504/', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.' },
+    { title: 'Reflupper', image: 'https://unsplash.it/505/505/', description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.' },
+  ];
   return (
- <div>
+ <div className='homepage'>
 
 <body>
-  <div class="wrapper">
-
+  
     {/* <!-- home --> */}
+    
     <div class="home">
-      <div class="container">
+      <div class="containerhome">
         <div class="founder-text">
           <h1 class="f-title">Get higher conversion rates on landing pages</h1>
           <p class="f-descr">We help you get more leads by creating and managing high performing landing pages.</p>
@@ -23,43 +27,67 @@ const Middle = () => {
         <div class="founder"></div>
       </div>
     </div>
-    {/* <!-- results --> */}
-    <div class="results box">
-      <div class="container">
-        <h2 class="title">We give you increased results – every time!</h2>
-        <p class="descr">Use our expertise to design effective landing pages. After we design and make your page, we help you optimize through A/B testing in order to make it perform to it’s max potential.</p>
 
-        <div class="results-item clearfix">
-          {/* <!--result item 1 --> */}
-          <div class="item-1-icon column">
-            <h3 class="item-title">Boost Effect</h3>
-            <p class="item-descr">We help you with external landing pages designed for one specific goal. You’ll get higher conversion rates and more business in return.</p>
-          </div>
-          {/* <!--result item 2 --> */}
-          <div class="item-2-icon column">
-            <h3 class="item-title">Improve Your ROI</h3>
-            <p class="item-descr">Our proven process for optimization with A/B-testing will give you high effect on your landing pages. Simply put – get more leads on your current traffic.</p>
-          </div>
-          {/* <!--result item 3 --> */}
-          <div class="item-3-icon column">
-            <h3 class="item-title">Quick Results</h3>
-            <p class="item-descr">Together we define your goals. We design, write copy and launch so you can focus on growing your business. Fast.</p>
-          </div>
+
+
+   <div>  
+
+   <div className="CSSgal">
+      {/* Slide Targets */}
+      <div id="s1"></div>
+      <div id="s2"></div>
+      <div id="s3"></div>
+      <div id="s4"></div>
+
+      {/* Slider */}
+      <div className="slider">
+        <div style={{ background: '#5b8' }}>
+          <h2>PURE <b>CSS</b> SLIDESHOW</h2>
+          <p>Responsive Slideshow Gallery created using CSS only<br />by Roko</p>
+        </div>
+        <div style={{ background: '#85b' }}>
+          <h2>Slide 2</h2>
+        </div>
+        <div style={{ background: '#e95' }}>
+          <h2>Slide 3</h2>
+        </div>
+        <div style={{ background: '#e59' }}>
+          <h2>Slide 4</h2>
         </div>
       </div>
-    </div>
-    {/* <!-- external block --> */}
-    <div class="external box">
-      <div class="container-sl">
-       <ul class="slideshow">
-  <li><span></span></li>
-  <li><span>2</span></li>
-  <li><span></span></li>
-  <li><span></span></li>
-  <li><span></span></li>
-</ul>
+
+      {/* Prev/Next Navigation */}
+      <div className="prevNext">
+        <div>
+          <a href="#s4"></a><a href="#s2"></a>
+        </div>
+        <div>
+          <a href="#s1"></a><a href="#s3"></a>
+        </div>
+        <div>
+          <a href="#s2"></a><a href="#s4"></a>
+        </div>
+        <div>
+          <a href="#s3"></a><a href="#s1"></a>
+        </div>
+      </div>
+
+      {/* Bullets Navigation */}
+      <div className="bullets">
+        <a href="#s1">1</a>
+        <a href="#s2">2</a>
+        <a href="#s3">3</a>
+        <a href="#s4">4</a>
       </div>
     </div>
+
+
+
+
+
+   </div>
+
+
     {/* <!-- process --> */}
     <div class="process box">
       <div class="container">
@@ -83,6 +111,35 @@ const Middle = () => {
         </div>
       </div>
     </div>
+    {/* <!-- results --> */}
+
+    
+    <div class="results box">
+    
+    <div className="wrapper">
+      <h1>Parallax Flipping Cards</h1>
+      <div className="cols">
+        {cardsData.map((card, index) => (
+          <div key={index} className="col" ontouchstart="this.classList.toggle('hover');">
+            <div className="containerab">
+              <div className="front" style={{ backgroundImage: `url(${card.image})` }}>
+                <div className="inner">
+                  <p>{card.title}</p>
+                  <span>Lorem ipsum</span>
+                </div>
+              </div>
+              <div className="back">
+                <div className="inner">
+                  <p>{card.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+   
     {/* <!-- help --> */}
     <div class="help box">
       <div class="container">
@@ -93,15 +150,56 @@ const Middle = () => {
       </div>
     </div>
     {/* <!--screen-size--> */}
-    <div class="screen box">
-      <div class="container">
-        <div class="screen-text clearfix">
-          <h2 class="title">Get high conversion rates for all screen sizes</h2>
-          <p class="descr">Make your customer experience a good one for all screen sizes. You might even run mobile marketing campaigns using, use QR-codes or similar. To get the highest possible conversion rates you get landing pages tailored to both mobile and desktop visitors. Interesting fact: Based on experience conversion rates are higher on mobile than desktop. We can help you make that happen.</p>
-        </div>
-        <div class="screen-img"></div>
+   
+       <div className="message">
+        Sorry, your browser does not support CSS Grid. 😅
       </div>
-    </div>
+      <section className="sectionbox">
+       
+        <div className="grid">
+          <div className="item">
+            <div className="item__details">jelly-o brownie sweet</div>
+          </div>
+          <div className="item item--large">
+            <div className="item__details">Muffin jelly gingerbread</div>
+          </div>
+          <div className="item item--medium">
+            <div className="item__details">sesame snaps chocolate</div>
+          </div>
+          <div className="item item--large">
+            <div className="item__details">Oat cake</div>
+          </div>
+          <div className="item item--full">
+            <div className="item__details">jujubes cheesecake</div>
+          </div>
+          <div className="item item--medium">
+            <div className="item__details">Dragée pudding brownie</div>
+          </div>
+          <div className="item item--large">
+            <div className="item__details">Oat cake</div>
+          </div>
+          <div className="item">
+            <div className="item__details">powder toffee</div>
+          </div>
+          <div className="item item--medium">
+            <div className="item__details">pudding cheesecake</div>
+          </div>
+          <div className="item item--large">
+            <div className="item__details">toffee bear claw</div>
+          </div>
+          <div className="item">
+            <div className="item__details">cake cookie croissant</div>
+          </div>
+          <div className="item item--medium">
+            <div className="item__details">liquorice sweet roll</div>
+          </div>
+          <div className="item">
+            <div className="item__details">chocolate marzipan</div>
+          </div>
+         
+        </div>
+      </section>
+    
     {/* <!--testing--> */}
     <div class="testing box">
       <div class="container">
@@ -124,17 +222,7 @@ const Middle = () => {
       </div>
     </div>
     {/* <!--effect--> */}
-    <div class="effect box">
-      <div class="container">
-        <h2 class="title">See how Danske Bank almost doubled their effect</h2>
-        <p class="descr">
-          Danske Bank wanted more leads on the traffic they were getting from online ads. We created a new landing page and work continuously to improve the effect. A/B testing gave 91% increase in conversion rates on one test alone! More leads for Danske Bank – and better return on investment.
-        </p>
-        <div class="effect-img"></div>
-        <div class="effect-img-arrow"></div>
-        <p class="rate"><span>91%</span><br />increased conversion rate</p>
-      </div>
-    </div>
+  
     {/* <!--customers--> */}
     <div class="customers box">
       <div class="container">
@@ -162,15 +250,7 @@ const Middle = () => {
         <div class="partner-img"></div>
       </div>
     </div>
-    <div class="help box">
-      <div class="container">
-        <h2 class="item-title">Get higher conversion rates on your landing pages
-        </h2>
-        <p class="item-descr">We help you get more leads by creating and managing high performing landing pages.
-        </p>
-        <a class="cta" href="#">I want help now</a>
-      </div>
-    </div>
+ 
     <footer>
       <div class="footer box">
         <div class="container">
