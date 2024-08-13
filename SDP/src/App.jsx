@@ -13,6 +13,10 @@ import NotFound from './pages/Web/Notfound';
 import ProductsPage from './pages/Web/ProductsPage';
 import BookedProductsPage from './pages/Web/BookedProductsPage';
 import Popup from './components/Popup';
+import Western from './pages/Web/Western';
+import Ethnic from './pages/Web/Ethnic';
+import Accessories from './pages/Web/Accessories';
+import Mens from './pages/Web/Mens';
 
 const App = () => {
     const [bookedProducts, setBookedProducts] = useState([]);
@@ -40,6 +44,26 @@ const App = () => {
                         <Route 
                             path='/ProductsPage' 
                             element={<ProductsPage handleBooking={handleBooking} />} 
+                        />
+                        <Route 
+                            path='/western' 
+                            element={<Western handleBooking={handleBooking} />} 
+                        />
+                        <Route 
+                            path='/Ethnic' 
+                            element={<Ethnic handleBooking={handleBooking} />} 
+                        />
+                        <Route 
+                            path='/Ethnic' 
+                            element={<Ethnic handleBooking={handleBooking} />} 
+                        />
+                        <Route 
+                            path='/Accessories' 
+                            element={<Accessories handleBooking={handleBooking} />} 
+                        />
+                        <Route 
+                            path='/mens-collection' 
+                            element={<Mens handleBooking={handleBooking} />} 
                         />
                         <Route 
                             path='/BookedProductsPage' 

@@ -20,9 +20,9 @@ const Middle = () => {
     <div class="home">
       <div class="containerhome">
         <div class="founder-text">
-          <h1 class="f-title">Get higher conversion rates on landing pages</h1>
-          <p class="f-descr">We help you get more leads by creating and managing high performing landing pages.</p>
-          <a class="cta" href="#">Get help with landing pages</a>
+          <h1 class="f-title">Get higher conversion rates on fashion styles</h1>
+          <p class="f-descr">We help you get more leads by offering and managing high performing clothing systems.</p>
+          <a class="cta" href="#">Get help with Flyrobe</a>
         </div>
         <div class="founder"></div>
       </div>

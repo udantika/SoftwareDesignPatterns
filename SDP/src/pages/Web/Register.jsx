@@ -1,56 +1,54 @@
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-
- 
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { SignUp } from '../../services/api'
+import { toast, Toaster } from 'react-hot-toast'
 const Register = () => {
-  return (
-    <div className="h-full w-full flex justify-center items-center bg-green-100 ">
 
-    <Card className="w-[350px]">
-   <CardHeader>
-     <CardTitle>Register</CardTitle>
-   </CardHeader>
-   <CardContent>
-     <form>
-       <div className="grid w-full items-center gap-4">
-         <div className="flex flex-col space-y-1.5">
-           <Label htmlFor="name">Name</Label>
-           <Input id="name" placeholder="Enter Name" />
-         </div>
-         <div className="flex flex-col space-y-1.5">
-           <Label htmlFor="name">Email</Label>
-           <Input id="name" placeholder="Enter Email" />
-         </div>
-         <div className="flex flex-col space-y-1.5">
-           <Label htmlFor="framework">Password</Label>
-           <Input id="password" placeholder="Enter password" />
-         </div>
-         <div className="flex flex-col space-y-1.5">
-           <Label htmlFor="name">Phone no</Label>
-           <Input id="name" placeholder="Enter Phone no" />
-         </div>
+    const navigate = useNavigate()
+    const [registerdata, setRegisterdata] = useState({
+        name: '',
+        phone: '',
+        address: '',
+        email: '',
+        password: ''
+    })
+    const handleChange = (e) => {
+        setRegisterdata({ ...registerdata, [e.target.id]: e.target.value })
+    }
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        console.log(registerdata);
+        const res = await SignUp(registerdata.name, registerdata.email, registerdata.phone, registerdata.address, registerdata.password);
 
-       </div>
-     </form>
-   </CardContent>
-   <CardFooter className="flex justify-between">
-     {/* <Button variant="outline">Cancel</Button> */}
-     <div className="flex justify-center items-center">
-      
-     <Button>Register</Button>
-     </div>
-   </CardFooter>
- </Card>
- </div>
-  )
+        if (res.data==="User registered successfully.") {
+
+            toast.success("Signup Success")
+            setTimeout(() => {
+                navigate('/login')
+            }, 5000)
+        }
+        else {
+            toast.error(res.data)
+            // console.log(res.data)
+        }
+
+    }
+    return (
+        <>
+            <div className='p-0 m-0 h-[90vh] w-screen flex justify-center items-center flex-col'>
+                <form className='flex flex-col gap-5 bg-slate-50/80 h-4/6 w-[30%] items-center justify-center rounded-md shadow-md shadow-green-100' onSubmit={handleSubmit}>
+                    <input type="text" name="" id="name" placeholder='Name' className='bg-green-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-green-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' onChange={handleChange} required />
+                    <input type="text" name="" id="phone" placeholder='Phone' className='bg-green-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-green-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' onChange={handleChange} required />
+                    <input type="text" name="" id="address" placeholder='Address' className='bg-green-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-green-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' onChange={handleChange} required />
+                    <input type="email" name="" id="email" placeholder='Email' className='bg-green-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-green-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' onChange={handleChange} required />
+                    <input type="password" name="" id="password" placeholder='Password' className='bg-green-100/50 outline-none border-2 border-transparent focus:border-b-2 focus:border-b-green-300 rounded-sm w-[80%] text-black placeholder:text-black p-2 shadow-sm' onChange={handleChange} required />
+                    <button type="submit" className='w-[80%] bg-gradient-to-tr from-green-600 to-green-300 text-white p-2 rounded-sm font-bold mt-4 shadow-md shadow-green-500/40'>Register</button>
+                    <p>Already have an account ? <span className='text-green-500 cursor-pointer font-bold' onClick={() => navigate('/login')}> Login ! </span></p>
+                </form>
+            </div>
+            <Toaster />
+        </>
+    )
 }
 
 export default Register

@@ -4,6 +4,7 @@ import Middle from '@/components/Web/Middle';
 import Footer from '@/components/Web/Footer';
 import ProductsPage from './ProductsPage';
 import BookedProductsPage from './BookedProductsPage';
+import Western from './Western';
 
 const Home = () => {
   const [bookedProducts, setBookedProducts] = useState([]);
@@ -17,8 +18,8 @@ const Home = () => {
   const NavLinks = [
     { title: "NEW ARRIVALS", path: "/ProductsPage" },
     { title: "WESTERN", path: "/western" },
-    { title: "ETHNIC", path: "/ethnic" },
-    { title: "ACCESSORIES", path: "/accessories" },
+    { title: "ETHNIC", path: "/Ethnic" },
+    { title: "ACCESSORIES", path: "/Accessories" },
     { title: "MENS COLLECTION", path: "/mens-collection" },
     { title: "BOOKED", path: "/BookedProductsPage" },
   ];
@@ -44,6 +45,10 @@ const Home = () => {
           <Route 
             path="/ProductsPage" 
             element={<ProductsPage onBookProduct={handleBooking} />} 
+          />
+          <Route 
+            path="/western" 
+            element={<Western onBookProduct={handleBooking} />} 
           />
           <Route 
             path="/BookedProductsPage" 

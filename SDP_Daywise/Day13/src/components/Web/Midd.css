@@ -1,0 +1,730 @@
+.homepage
+{
+
+
+ol,
+ul {
+  list-style-type: none;
+}
+a {
+  font-weight: bold;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.containerhome {
+  width: 940px;
+  margin: 0 auto;
+}
+.cta {
+  padding: 14px;
+  border-radius: 4px;
+  background: #ff9900;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px #e08428;
+  text-transform: uppercase;
+}
+.cta:hover {
+  background: #f19710;
+}
+.box {
+  padding: 80px 0;
+}
+h2.title {
+  font: bold 30px/30px Arial, sans-serif;
+  color: #333;
+  padding-bottom: 20px;
+}
+p.descr {
+  font: normal 18px/36px Arial, sans-serif;
+  color: #666;
+  margin: 0 auto;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*home*/
+.home {
+  position: relative;
+  top: 100px;
+  height: 500px;
+  background: #aad0df;
+  margin-bottom: 100px; /*?*/
+}
+.founder {
+  height: 500px;
+  background: #aad0df
+    url("http://conversionlab.no/wp-content/uploads/2013/09/finge-600-21.png")
+    no-repeat left bottom;
+  background-size: 400px;
+}
+.founder-text {
+  float: right;
+  position: relative;
+  top: 130px;
+  width: 460px;
+}
+h1.f-title {
+  font: bold 42px/52px Arial, sans-serif;
+  color: #fff;
+}
+p.f-descr {
+  font: bold 18px/32px Arial, sans-serif;
+  color: #555;
+  padding: 15px 0 40px 0;
+}
+
+/*results*/
+.results {
+  text-align: center;
+  background: #fff;
+}
+.results p.descr {
+  width: 700px;
+}
+.results-item {
+  padding-top: 60px;
+}
+.column {
+  float: left;
+  width: 33%;
+  padding-right: 0.5%;
+  padding-top: 180px;
+}
+.column:last-child {
+  padding-right: 0;
+}
+.item-1-icon {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/rocket2.png")
+    no-repeat center top;
+}
+.item-2-icon {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/money3.png")
+    no-repeat center top;
+}
+.item-3-icon {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/speed1.png")
+    no-repeat center top;
+}
+.item-title {
+  font: bold 24px/24px Arial, sans-serif;
+  color: #333;
+  padding-bottom: 20px;
+}
+.item-descr {
+  font: normal 18px/30px Arial, sans-serif;
+  color: #555;
+}
+/* ...roundbox  */
+/*external block*/
+
+/*process*/
+.process {
+  background: #fff;
+  text-align: center;
+}
+.process h2.title {
+  padding-bottom: 80px;
+}
+.process-icon-1 {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/target-red.png")
+    no-repeat center top;
+}
+.process-icon-2 {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/blueprints-green.png")
+    no-repeat center top;
+}
+.process-icon-3 {
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/chemistry1.png")
+    no-repeat center top;
+}
+/*help & help-2*/
+.help {
+  text-align: center;
+  background: #525e6c;
+}
+.help h2.item-title {
+  color: #fff;
+}
+.help p.item-descr {
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+/*testing*/
+.testing {
+  text-align: center;
+}
+.testing p.descr {
+  width: 740px;
+  padding-bottom: 60px;
+}
+.testing-img-1 {
+  float: left;
+  width: 400px;
+  height: 230px;
+  background: url("http://conversionlab.no/wp-content/uploads/2015/02/campaignmonitor-a.png")
+    no-repeat;
+  background-size: 400px;
+}
+.testing-img-2 {
+  float: right;
+  width: 400px;
+  height: 230px;
+  background: url("http://conversionlab.no/wp-content/uploads/2015/02/campaignmonitor-b.png")
+    no-repeat;
+  background-size: 400px;
+}
+.testing-img-arrow {
+  float: right;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  top: 300px;
+  left: 200px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/right-arrow.png")
+    no-repeat;
+  background-size: 100px;
+}
+.testing p.rate {
+  padding-top: 260px;
+  font: bold 24px/24px Arial, sans-serif;
+  color: #222;
+}
+.testing p span {
+  font-size: 62px;
+  line-height: 2;
+  color: #525e6c;
+}
+/*review*/
+.review {
+  background: #fff
+    url("http://conversionlab.no/wp-content/uploads/2015/02/shamita-ongrey-large.jpg")
+    no-repeat;
+  background-size: cover;
+}
+.review-text {
+  width: 600px;
+}
+.review h4 {
+  padding: 40px 0;
+  color: #222;
+}
+.review-img {
+  width: 200px;
+  height: 30px;
+  background: url("http://conversionlab.no/wp-content/uploads/2015/02/campaignmonitor-logo-dark.png")
+    no-repeat;
+  background-size: 200px;
+}
+
+/*customers*/
+.customers {
+  text-align: center;
+  background: #fff;
+}
+.customers p.descr {
+  width: 700px;
+  padding-bottom: 60px;
+}
+.customer-wall-1 {
+  padding-bottom: 60px;
+}
+.customer-img-1 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/danske-bank.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 46px;
+}
+.customer-img-2 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/signicat.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 46px;
+}
+.customer-img-3 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/campaign-monitor-logo.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 46px;
+}
+.customer-img-4 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/storebrand.png")
+    no-repeat;
+  background-size: 200px;
+}
+.customer-wall-2 {
+  padding: 0 60px;
+}
+.customer-img-5 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/questback-logo.png")
+    no-repeat;
+  background-size: 200px;
+  padding-right: 90px;
+}
+.customer-img-6 {
+  float: left;
+  width: 200px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/logo-em1.png")
+    no-repeat;
+  background-size: 200px;
+}
+.customer-img-7 {
+  float: right;
+  width: 160px;
+  height: 50px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/adresseavisen-logo.png")
+    no-repeat;
+  background-size: 160px;
+}
+/*partner*/
+.partner {
+  text-align: center;
+}
+.partner-img {
+  width: 300px;
+  height: 100px;
+  background: url("http://conversionlab.no/wp-content/uploads/2013/09/unbounce-logo.png")
+    no-repeat;
+  background-size: 300px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*footer*/
+.footer {
+  background: #1a232b;
+}
+.footer h5.title {
+  text-transform: uppercase;
+  color: #ff9900;
+  padding-bottom: 10px;
+}
+.footer p.descr {
+  color: #fff;
+  font: bold 14px/20px Arial, sans-serif;
+  padding-bottom: 40px;
+}
+.footer .cta {
+  font-size: 12px;
+  background: #86ccc9;
+  box-shadow: 0 4px #6da3a1;
+}
+.footer .cta:hover {
+  background: #76b4b2;
+}
+.footer .column-1 {
+  float: left;
+  width: 200px;
+  margin-right: 80px;
+}
+.social a {
+  display: inline-block;
+}
+.fb-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #3a579a;
+  margin-right: 3px;
+}
+.tw-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00abf0;
+  margin-right: 3px;
+}
+.g-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #df4a32;
+}
+/*copyright*/
+.copyright {
+  padding: 30px 0;
+  background: #222;
+  color: #525e6c;
+  font-size: 14px;
+}
+.copyright span {
+  float: left;
+}
+.copyright p {
+  float: right;
+}
+.copyright p a {
+  color: #525e6c;
+}
+/* ParallaxFlippingCards.css */
+
+.wrapper {
+  text-align: center;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.col {
+  width: 200px;
+  height: 320px;
+  margin: 15px;
+  perspective: 1000px;
+}
+
+.containerab {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.containerab:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.front {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.front .inner {
+  text-align: center;
+}
+
+.back {
+  background-color: #f8f8f8;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.back .inner {
+  font-size: 14px;
+  color: #333;
+}
+
+
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+}
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+.CSSgal .prevNext {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div + div {
+  visibility: hidden;
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  opacity: 0.7;
+  transition: 0.3s;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+
+.CSSgal .prevNext a + a {
+  left: auto;
+  right: 0;
+}
+
+.CSSgal .bullets {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.CSSgal .bullets > a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  transition: 0.3s;
+}
+
+.CSSgal .bullets > a + a {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.CSSgal > div:target ~ .bullets > * {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+#s1:target ~ .bullets > *:nth-child(1),
+#s2:target ~ .bullets > *:nth-child(2),
+#s3:target ~ .bullets > *:nth-child(3),
+#s4:target ~ .bullets > *:nth-child(4) {
+  background: rgba(255, 255, 255, 1);
+}
+
+.CSSgal > div:target ~ .prevNext > * {
+  visibility: hidden;
+}
+
+#s1:target ~ .prevNext > *:nth-child(1),
+#s2:target ~ .prevNext > *:nth-child(2),
+#s3:target ~ .prevNext > *:nth-child(3),
+#s4:target ~ .prevNext > *:nth-child(4) {
+  visibility: visible;
+}
+
+#s1:target ~ .slider {
+  transform: translateX(0%);
+}
+
+#s2:target ~ .slider {
+  transform: translateX(-100%);
+}
+
+#s3:target ~ .slider {
+  transform: translateX(-200%);
+}
+
+#s4:target ~ .slider {
+  transform: translateX(-300%);
+}
+
+.CSSgal {
+  color: #fff;
+  text-align: center;
+}
+
+.CSSgal .slider h2 {
+  margin-top: 40vh;
+  font-weight: 200;
+  letter-spacing: -0.06em;
+  word-spacing: 0.2em;
+  font-size: 3em;
+}
+
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css?family=Arvo");
+
+.screen-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f5f4f4;
+  font-size: 13px;
+  font-family: "Arvo", monospace;
+}
+
+.message {
+  border: 1px solid #d2d0d0;
+  padding: 2em;
+  font-size: 1.7vw;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+}
+
+.sectionbox {
+  display: none;
+  padding: 2rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 4rem;
+  }
+
+  @supports (display: grid) {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  counter-increment: item-counter;
+}
+
+.item:nth-of-type(3n) {
+  background-image: url("https://images.unsplash.com/photo-1422255198496-21531f12a6e8?dpr=2&auto=format&fit=crop&w=1500&h=996&q=80&cs=tinysrgb&crop=");
+}
+
+.item:nth-of-type(4n) {
+  background-image: url("https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?dpr=2&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=");
+}
+
+.item:nth-of-type(5n) {
+  background-image: url("https://images.unsplash.com/photo-1476097297040-79e9e1603142?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+}
+
+.item:nth-of-type(6n) {
+  background-image: url("https://images.unsplash.com/photo-1464652149449-f3b8538144aa?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
+}
+
+.item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item:hover:after {
+  opacity: 0;
+}
+
+.item--medium {
+  grid-row-end: span 2;
+}
+
+.item--large {
+  grid-row-end: span 3;
+}
+
+.item--full {
+  grid-column-end: auto;
+
+  @media screen and (min-width: 768px) {
+    grid-column: 1/-1;
+    grid-row-end: span 2;
+  }
+}
+
+.item__details {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  background: #fff;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #828282;
+}
+
+.item__details:before {
+  content: counter(item-counter);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-right: 0.5em;
+  color: #444;
+}
+
+
+
+}
